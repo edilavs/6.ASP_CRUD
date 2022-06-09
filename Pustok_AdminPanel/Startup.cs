@@ -19,7 +19,7 @@ namespace Pustok
         {
             services.AddControllersWithViews();
             services.AddDbContext<AppDbContext>(options =>
-            options.UseSqlServer("Server=VALIDAPC;Database=BP202_Pustok;Trusted_Connection=TRUE")
+            options.UseSqlServer("Server=CAPR12;Database=BP202_Pustok;Trusted_Connection=TRUE")
             );
 
         }
@@ -38,7 +38,7 @@ namespace Pustok
             {
                 endpoints.MapControllerRoute(
                  "area",
-                 "{area:exists}/{controller=dashboard}/{action=index}"
+                 "{area:exists}/{controller=dashboard}/{action=index}/{id?}"
                  );
                 endpoints.MapControllerRoute(
                     "default",

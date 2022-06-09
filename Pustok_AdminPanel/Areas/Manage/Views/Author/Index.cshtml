@@ -23,19 +23,17 @@
                     @foreach (var author in Model)
                      {
                         count++;
-                    <tr>
+                      <tr>
                         <th scope="row">@count</th>
                         <td>@author.FullName</td>
                         <td>@author.BirthDate.ToString("dd-MM-yyyy")</td>
                         <td>@author.Books.Count()</td>
                         <td>
                             <a asp-action="edit" asp-route-id="@author.Id" class="btn btn-warning">Edit</a>
-                            <a asp-action="delete" class="btn btn-danger">Delete</a>
+                            <a asp-action="delete" asp-route-id="@author.Id" class="btn btn-danger">Delete</a>
                         </td>
-                    </tr>
+                      </tr>
                      }
-
-
                 </tbody>
             </table>
         </div>

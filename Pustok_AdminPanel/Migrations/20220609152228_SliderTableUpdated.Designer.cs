@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Pustok.DAL;
 
 namespace Pustok.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220609152228_SliderTableUpdated")]
+    partial class SliderTableUpdated
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -154,16 +156,15 @@ namespace Pustok.Migrations
                         .HasMaxLength(100);
 
                     b.Property<int>("Order")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasMaxLength(35);
 
                     b.Property<string>("Text")
                         .HasColumnType("nvarchar(250)")
                         .HasMaxLength(250);
 
                     b.Property<string>("Title1")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(35)")
-                        .HasMaxLength(35);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title2")
                         .HasColumnType("nvarchar(35)")

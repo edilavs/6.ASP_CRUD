@@ -57,7 +57,6 @@ namespace Pustok.Areas.Manage.Controllers
         [HttpPost]
         public IActionResult Edit(Author author)
         {
-
             if (!ModelState.IsValid)
             {
                 return View();
@@ -74,5 +73,35 @@ namespace Pustok.Areas.Manage.Controllers
             _context.SaveChanges();
             return RedirectToAction("index");
         }
+
+
+        public IActionResult Delete(int id)
+        {
+            Author author = _context.Authors.Include(x => x.Books).FirstOrDefault(x => x.Id == id);
+            if (author==null)
+            {
+                return RedirectToAction("error", "dashboard");
+            }
+            return View(author);
+        }
+
+
+        [HttpPost]
+        public IActionResult Delete(Author author)
+        {
+            Author existAuthor = _context.Authors.Include(x => x.Books).FirstOrDefault(x => x.Id == author.Id);
+
+            if (existAuthor==null)
+            {
+                return RedirectToAction("error", "dashboard");
+            }
+            _context.Authors.Remove(existAuthor);
+            _context.SaveChanges();
+
+            return RedirectToAction("index");
+        }
+
+
+        
     }
 }

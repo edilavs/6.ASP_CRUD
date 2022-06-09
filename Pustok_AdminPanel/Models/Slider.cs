@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -12,6 +13,8 @@ namespace Pustok.Models
         [Required]
         [StringLength(maximumLength: 35)]
         public string Title1 { get; set; }
+        public int Order { get; set; }
+       
         [StringLength(maximumLength: 35)]
         public string Title2 { get; set; }
         [StringLength(maximumLength: 250)]
@@ -22,5 +25,6 @@ namespace Pustok.Models
         public string BtnUrl { get; set; }
         [StringLength(maximumLength: 100)]
         public string Image { get; set; }
+        public IFormFile ImageFile { get; set; }
     }
 }
