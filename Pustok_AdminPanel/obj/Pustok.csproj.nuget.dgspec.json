@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bduguest\\Desktop\\6.ASP_CRUD\\Pustok_AdminPanel\\Pustok.csproj": {}
+    "C:\\Users\\99470\\Desktop\\6.ASP_CRUD\\Pustok_AdminPanel\\Pustok.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bduguest\\Desktop\\6.ASP_CRUD\\Pustok_AdminPanel\\Pustok.csproj": {
+    "C:\\Users\\99470\\Desktop\\6.ASP_CRUD\\Pustok_AdminPanel\\Pustok.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bduguest\\Desktop\\6.ASP_CRUD\\Pustok_AdminPanel\\Pustok.csproj",
+        "projectUniqueName": "C:\\Users\\99470\\Desktop\\6.ASP_CRUD\\Pustok_AdminPanel\\Pustok.csproj",
         "projectName": "Pustok",
-        "projectPath": "C:\\Users\\bduguest\\Desktop\\6.ASP_CRUD\\Pustok_AdminPanel\\Pustok.csproj",
-        "packagesPath": "C:\\Users\\bduguest\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bduguest\\Desktop\\6.ASP_CRUD\\Pustok_AdminPanel\\obj\\",
+        "projectPath": "C:\\Users\\99470\\Desktop\\6.ASP_CRUD\\Pustok_AdminPanel\\Pustok.csproj",
+        "packagesPath": "C:\\Users\\99470\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\99470\\Desktop\\6.ASP_CRUD\\Pustok_AdminPanel\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\bduguest\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\99470\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -77,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     }
