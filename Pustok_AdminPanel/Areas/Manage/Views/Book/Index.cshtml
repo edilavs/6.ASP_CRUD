@@ -7,6 +7,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-10 mx-auto">
+            <a class="btn btn-primary" asp-action="create">Create</a>
             <table class="table">
                 <thead>
                     <tr>
@@ -16,6 +17,7 @@
                         <th>SalePrice</th>
                         <th>AuthorName</th>
                         <th>GenreName</th>
+                        <th>Actions</th>
 
                     </tr>
                 </thead>
@@ -30,6 +32,11 @@
                         <td>@book.SalePrice</td>
                         <td>@book.Author.FullName</td>
                         <td>@book.Genre.Name</td>
+                        <td>
+                            <a class="btn btn-warning" asp-action="edit" asp-route-id="@book.Id">Edit</a>
+                            <a class="btn btn-danger" asp-action="delete" asp-route-id="@book.Id">Delete</a>
+
+                        </td>
                     </tr>
                     }
 

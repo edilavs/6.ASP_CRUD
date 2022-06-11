@@ -24,5 +24,15 @@ namespace Pustok.Helpers
             }
                 return guid + file.FileName.Substring(file.FileName.Length - 64, 64);
         }
+        public static bool Delete(string root, string folder, string filename)
+        {
+            string path = Path.Combine(root, folder, filename);
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+                return true;
+            }
+            return false;
+        }
     }
 }

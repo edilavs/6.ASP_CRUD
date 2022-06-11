@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿
+
+using Microsoft.AspNetCore.Mvc;
 using Pustok.DAL;
 using System;
 using System.Collections.Generic;
@@ -19,6 +21,10 @@ namespace Pustok.Areas.Manage.Controllers
         {
             var genre = _context.Genres.ToList();
             return View(genre);
+        }
+        public IActionResult Create()
+        {
+            return View();
         }
     }
 }
